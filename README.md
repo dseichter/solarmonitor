@@ -14,6 +14,8 @@ The following is the list of my components, I decided to use
 * Anker Solix Battery E1600
 * 4 solar panels
 
+![grafana-dashboard](grafana-dashboard.png)
+
 ## The challenges
 
 How can I connect my local components to AWS without VPN and how can I secure it. The other challenge is being most flexible, so that my services can handle more and more resources in a cost effective way.
