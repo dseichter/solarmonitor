@@ -118,6 +118,10 @@ Securing it with credentials, encrpytion, etc. will follow. Because of only you 
 
 Be sure, mosquitto will started automatically (systemctl enable mosquitto) and it listens on all interfaces (IPv4 and IPv6) at the given port 1883.
 
+### Anker Solix E1600
+
+To add also the data from my Anker Solix E1600 I have created another repository [solix2influxdb](https://github.com/dseichter/solix2influxdb). This will be able to send the data directly to an influxdb bucket.
+
 ## InfluxDB
 
 Create an instance using Ubuntu, choose a small instance size, like t4g.micro (or t3a, t3,...). Be sure you have added this EC2 instance to your security group.
