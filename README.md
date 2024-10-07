@@ -69,7 +69,7 @@ How to setup an EC2 is well documented by AWS. Probably I will provide a terrafo
 
 ## Raspberry PI
 
-Run the script [solar_update_sg.sh](/raspberrypi/solar_update_sg.sh) using cron every minute (or any other interval). My provided script is using my AVM FritzBox with TR069 enabled.
+Run the script [solar_update_sg.sh](/raspberrypi/solar_update_sg.sh) using cron every minute (or any other interval). My provided script is using my AVM FritzBox with TR064 enabled.
 
 Instead of the risk of running into a ratelimit by using public services like [ipfy.org](https://www.ipify.org/), your local router does not have one.
 
