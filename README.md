@@ -4,6 +4,25 @@ Services to monitor my solar system
 
 After receiving my solar system, my target is to monitor my solar system (and in future other components). Instead of having a server at my network at home, I trust in AWS. Therefore I want to use AWS resources, I can use in general to be most flexible.
 
+# Table of Contents
+
+- [solarmonitor](#solarmonitor)
+  - [Components](#components)
+  - [The challenges](#the-challenges)
+    - [Updating the security group in AWS](#updating-the-security-group-in-aws)
+    - [Resources](#resources)
+    - [Retrieving messages](#retrieving-messages)
+    - [Storing the messages](#storing-the-messages)
+    - [Dashboard](#dashboard)
+  - [The solution](#the-solution)
+    - [Detailed overview](#detailed-overview)
+  - [Implementation](#implementation)
+  - [Raspberry PI](#raspberry-pi)
+  - [Lambda](#lambda)
+  - [MQTT](#mqtt)
+  - [Anker Solix E1600](#anker-solix-e1600)
+  - [InfluxDB](#influxdb)
+
 ## Components
 
 The following is the list of my components, I decided to use
@@ -55,6 +74,7 @@ In this graph, I want to show you, how it looks like.
 | Update public IP | local | Raspberry PI | Check every minute my public IP |
 | OpenDTU          | local | Appliance    | connected to Hoymiles inverter |
 | MQTT             | AWS   | t4g.nano     | retrieves MQTT messages only from local network |
+|                  |       |              | runs [solix2influxdb](https://github.com/dseichter/solix2influxdb) |
 | Telegraf         | AWS   | t3a.nano     | read, process and store to InfluxDB (see later, why t3a) |
 | InfluxDB         | AWS   | t4g.micro    | Time series database |
 | Grafana          | AWS   | t4g.micro    | Dashboard |
